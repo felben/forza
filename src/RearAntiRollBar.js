@@ -17,7 +17,7 @@ class RearAntiRollBar extends Component {
     let stiff = parseFloat(this.state.stiffest)
     let soft = parseFloat(this.state.softest)
     let displacement = parseFloat(this.state.weight)
-    return  (((stiff-soft)*displacement)+soft)
+    return  (((stiff-soft)*displacement)+soft).toFixed(3)
   }
 
   handleSubmit = (evt) => {
