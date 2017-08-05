@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Input, Label, Button, Card } from 'reactstrap'
 
-class FrontAntiRollBar extends Component {
+class FrontSprings extends Component {
   constructor (props) {
     super(props)
 
@@ -17,7 +17,7 @@ class FrontAntiRollBar extends Component {
     let stiff = parseFloat(this.state.stiffest)
     let soft = parseFloat(this.state.softest)
     let displacement = parseFloat(this.state.weight)
-    return  (((stiff-soft)*displacement)+soft)
+    return  (((stiff-soft)*displacement)+soft).toFixed(3)
   }
 
   handleSubmit = (evt) => {
@@ -45,7 +45,7 @@ class FrontAntiRollBar extends Component {
         </FormGroup>
         <Button type="submit" color="primary" >Math</Button>
          <FormGroup>
-          <Label for="setting">{this.state.setting}</Label>
+          <Label for="setting">Setting:{this.state.setting}</Label>
         </FormGroup>
       </Form>
       </Card>
@@ -53,4 +53,4 @@ class FrontAntiRollBar extends Component {
   }
 }
 
-export default FrontAntiRollBar
+export default FrontSprings

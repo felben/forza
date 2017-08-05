@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './Container.css'
-import FrontAntiRollBar from './FrontAntiRollBar'
-import RearAntiRollBar from './RearAntiRollBar'
+import FrontAntiRollBar from './components/FrontAntiRollBar'
+import RearAntiRollBar from './components/RearAntiRollBar'
+import FrontSprings from './components/FrontSprings'
+import RearSprings from './components/RearSprings'
+import FrontReboundStiffness from './components/FrontReboundStiffness'
+import RearReboundStiffness from './components/RearReboundStiffness'
 import { Container, Row, Col, Card, CardHeader, CardBlock, Alert } from 'reactstrap'
 import './App.css';
 
@@ -29,13 +33,13 @@ class App extends Component {
           <Col md="3">
             <Card block>
               <CardHeader>FrontSprings</CardHeader>
-              <FrontAntiRollBar></FrontAntiRollBar>
+              <FrontSprings></FrontSprings>
             </Card>
           </Col>
            <Col md="3">
             <Card block>
               <CardHeader>RearSprings</CardHeader>
-              <FrontAntiRollBar></FrontAntiRollBar>
+              <RearSprings></RearSprings>
             </Card>
           </Col>
         </Row>
@@ -44,22 +48,16 @@ class App extends Component {
         <div>
         <Container className="frontanti-container">
         <Row>
-          <Col md="4">
+          <Col md="6">
             <Card block>
-              <CardHeader>FrontAntiRollBar</CardHeader>
-              <FrontAntiRollBar></FrontAntiRollBar>
+              <CardHeader>FrontReboundStiffness</CardHeader>
+              <FrontReboundStiffness></FrontReboundStiffness>
             </Card>
           </Col>
-          <Col md="4">
+          <Col md="6">
             <Card block>
-              <CardHeader>RearAntiRollBar</CardHeader>
-              <RearAntiRollBar></RearAntiRollBar>
-            </Card>
-          </Col>
-          <Col md="4">
-            <Card block>
-              <CardHeader>FrontSprings</CardHeader>
-              <FrontAntiRollBar></FrontAntiRollBar>
+              <CardHeader>RearReboundStiffness</CardHeader>
+              <RearReboundStiffness></RearReboundStiffness>
             </Card>
           </Col>
         </Row>
